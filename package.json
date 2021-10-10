@@ -1,17 +1,17 @@
 {
-  "name": "create-vue",
-  "version": "3.0.0-beta.6",
-  "description": "An easy way to start a Vue project",
+  "name": "create-iles",
+  "version": "0.1.0",
+  "description": "An easy way to start an îles project",
   "type": "module",
   "bin": {
-    "create-vue": "outfile.cjs"
+    "create-iles": "outfile.cjs"
   },
   "files": [
     "outfile.cjs",
     "template"
   ],
   "engines": {
-    "node": "^12.13.0 || ^14.0.0 || >= 16.0.0"
+    "node": "^14.0.0 || >= 16.0.0"
   },
   "scripts": {
     "prepare": "husky install",
@@ -24,15 +24,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuejs/create-vue.git"
+    "url": "git+https://github.com/ElMassimo/create-iles.git"
   },
   "keywords": [],
-  "author": "Haoqun Jiang <haoqunjiang+npm@gmail.com>",
+  "authors": [
+    "Haoqun Jiang <haoqunjiang+npm@gmail.com>",
+    "Máximo Mussini <maximomussini@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vuejs/create-vue/issues"
+    "url": "https://github.com/ElMassimo/create-iles/issues"
   },
-  "homepage": "https://github.com/vuejs/create-vue#readme",
+  "homepage": "https://github.com/ElMassimo/create-iles#readme",
   "devDependencies": {
     "esbuild": "^0.12.29",
     "husky": "^7.0.2",

@@ -18,7 +18,10 @@ export default function generateReadme({
 }) {
   let readme = `# ${projectName}
 
-This template should help get you started developing with Vue 3 in Vite.
+[îles]: https://github.com/ElMassimo/iles
+[configuration reference]: https://iles-docs.netlify.app/config
+
+This template should help get you started developing with [îles].
 
 ## Recommended IDE Setup
 
@@ -26,7 +29,7 @@ This template should help get you started developing with Vue 3 in Vite.
 ${needsTypeScript ? sfcTypeSupportDoc : ''}
 ## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+See îles [Configuration Reference].
 
 ## Project Setup
 

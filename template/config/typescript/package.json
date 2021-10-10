@@ -1,6 +1,5 @@
 {
   "scripts": {
-    "build": "vue-tsc --noEmit && vite build",
     "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {

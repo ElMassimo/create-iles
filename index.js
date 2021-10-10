@@ -115,47 +115,15 @@ async function init() {
           message: 'Package name:',
           initial: () => toValidPackageName(targetDir),
           validate: (dir) => isValidPackageName(dir) || 'Invalid package.json name'
-        },
-        {
-          name: 'needsTypeScript',
-          type: () => (isFeatureFlagsUsed ? null : 'toggle'),
-          message: 'Add TypeScript?',
-          initial: false,
-          active: 'Yes',
-          inactive: 'No'
-        },
-        {
-          name: 'needsJsx',
-          type: () => (isFeatureFlagsUsed ? null : 'toggle'),
-          message: 'Add JSX Support?',
-          initial: false,
-          active: 'Yes',
-          inactive: 'No'
-        },
-        {
-          name: 'needsRouter',
-          type: () => (isFeatureFlagsUsed ? null : 'toggle'),
-          message: 'Add Vue Router for Single Page Application development?',
-          initial: false,
-          active: 'Yes',
-          inactive: 'No'
-        },
-        {
-          name: 'needsVuex',
-          type: () => (isFeatureFlagsUsed ? null : 'toggle'),
-          message: 'Add Vuex for state management?',
-          initial: false,
-          active: 'Yes',
-          inactive: 'No'
-        },
-        {
-          name: 'needsTests',
-          type: () => (isFeatureFlagsUsed ? null : 'toggle'),
-          message: 'Add Cypress for testing?',
-          initial: false,
-          active: 'Yes',
-          inactive: 'No'
         }
+        // {
+        //   name: 'needsTests',
+        //   type: () => (isFeatureFlagsUsed ? null : 'toggle'),
+        //   message: 'Add Cypress for testing?',
+        //   initial: false,
+        //   active: 'Yes',
+        //   inactive: 'No'
+        // }
       ],
       {
         onCancel: () => {
@@ -173,10 +141,6 @@ async function init() {
   const {
     packageName = toValidPackageName(defaultProjectName),
     shouldOverwrite,
-    needsJsx = argv.jsx,
-    needsTypeScript = argv.typescript,
-    needsRouter = argv.router,
-    needsVuex = argv.vuex,
     needsTests = argv.tests
   } = result
   const root = path.join(cwd, targetDir)
@@ -206,63 +170,15 @@ async function init() {
   render('base')
 
   // Add configs.
-  if (needsJsx) {
-    render('config/jsx')
-  }
-  if (needsRouter) {
-    render('config/router')
-  }
-  if (needsVuex) {
-    render('config/vuex')
-  }
-  if (needsTests) {
-    render('config/cypress')
-  }
-  if (needsTypeScript) {
-    render('config/typescript')
-  }
+  // if (needsTests) {
+  //   render('config/cypress')
+  // }
+  render('config/typescript')
 
   // Render code template.
-  // prettier-ignore
-  const codeTemplate =
-    (needsTypeScript ? 'typescript-' : '') +
-    (needsRouter ? 'router' : 'default')
-  render(`code/${codeTemplate}`)
-
-  // Render entry file (main.js/ts).
-  if (needsVuex && needsRouter) {
-    render('entry/vuex-and-router')
-  } else if (needsVuex) {
-    render('entry/vuex')
-  } else if (needsRouter) {
-    render('entry/router')
-  } else {
-    render('entry/default')
-  }
+  render('code/default')
 
   // Cleanup.
-
-  if (needsTypeScript) {
-    // rename all `.js` files to `.ts`
-    // rename jsconfig.json to tsconfig.json
-    preOrderDirectoryTraverse(
-      root,
-      () => {},
-      (filepath) => {
-        if (filepath.endsWith('.js')) {
-          fs.renameSync(filepath, filepath.replace(/\.js$/, '.ts'))
-        } else if (path.basename(filepath) === 'jsconfig.json') {
-          fs.renameSync(filepath, filepath.replace(/jsconfig\.json$/, 'tsconfig.json'))
-        }
-      }
-    )
-
-    // Rename entry in `index.html`
-    const indexHtmlPath = path.resolve(root, 'index.html')
-    const indexHtmlContent = fs.readFileSync(indexHtmlPath, 'utf8')
-    fs.writeFileSync(indexHtmlPath, indexHtmlContent.replace('src/main.js', 'src/main.ts'))
-  }
-
   if (!needsTests) {
     // All templates assumes the need of tests.
     // If the user doesn't need it:
@@ -297,7 +213,6 @@ async function init() {
     generateReadme({
       projectName: result.projectName || defaultProjectName,
       packageManager,
-      needsTypeScript,
       needsTests
     })
   )
