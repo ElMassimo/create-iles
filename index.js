@@ -50,9 +50,7 @@ async function init() {
   // --force (for force overwriting)
   const argv = minimist(process.argv.slice(2), {
     alias: {
-      typescript: ['ts'],
-      'with-tests': ['tests', 'cypress'],
-      router: ['vue-router']
+      'with-tests': ['tests', 'cypress']
     },
     // all arguments are treated as booleans
     boolean: true
@@ -60,12 +58,17 @@ async function init() {
 
   // if any of the feature flags is set, we would skip the feature prompts
   // use `??` instead of `||` once we drop Node.js 12 support
-  const isFeatureFlagsUsed =
-    typeof (argv.default || argv.ts || argv.jsx || argv.router || argv.vuex || argv.tests) ===
-    'boolean'
+  const isFeatureFlagsUsed = typeof (argv.default || argv.tests) === 'boolean'
+
+  const hasFramework =
+    argv.framework ||
+    (argv.preact && 'preact') ||
+    (argv.solid && 'solid') ||
+    (argv.svelte && 'svelte') ||
+    (argv.default && 'vue')
 
   let targetDir = argv._[0]
-  const defaultProjectName = !targetDir ? 'vue-project' : targetDir
+  const defaultProjectName = !targetDir ? 'iles-app' : targetDir
 
   const forceOverwrite = argv.force
 
@@ -115,6 +118,18 @@ async function init() {
           message: 'Package name:',
           initial: () => toValidPackageName(targetDir),
           validate: (dir) => isValidPackageName(dir) || 'Invalid package.json name'
+        },
+        {
+          name: 'framework',
+          type: () => (hasFramework ? null : 'select'),
+          message: 'Add support for non-Vue islands?',
+          choices: [
+            { title: 'No', value: 'vue' },
+            { title: 'Preact', value: 'preact' },
+            { title: 'Svelte', value: 'svelte' },
+            { title: 'SolidJS', value: 'solid' }
+          ],
+          initial: 0
         }
         // {
         //   name: 'needsTests',
@@ -141,7 +156,8 @@ async function init() {
   const {
     packageName = toValidPackageName(defaultProjectName),
     shouldOverwrite,
-    needsTests = argv.tests
+    needsTests = argv.tests,
+    framework = hasFramework
   } = result
   const root = path.join(cwd, targetDir)
 
@@ -177,6 +193,7 @@ async function init() {
 
   // Render code template.
   render('code/default')
+  render(`code/${framework || 'vue'}`)
 
   // Cleanup.
   if (!needsTests) {

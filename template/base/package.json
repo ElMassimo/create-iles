@@ -1,11 +1,11 @@
 {
   "scripts": {
-    "dev": "iles dev",
+    "dev": "iles dev --open",
     "build": "iles build",
-    "preview": "vite preview --port 5050"
+    "preview": "vite preview --open --port 5050"
   },
   "devDependencies": {
-    "iles": "^0.2.1",
-    "vite": "^2.6.3"
+    "iles": "^0.3.1",
+    "vite": "^2.6.10"
   }
 }
