@@ -127,7 +127,7 @@ async function init() {
             { title: 'No', value: 'vue' },
             { title: 'Preact', value: 'preact' },
             { title: 'Svelte', value: 'svelte' },
-            { title: 'SolidJS', value: 'solid' }
+            { title: 'Solid', value: 'solid' }
           ],
           initial: 0
         }

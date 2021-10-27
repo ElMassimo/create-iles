@@ -24,12 +24,12 @@ importers:
 
   playground/default:
     specifiers:
-      iles: ^0.3.1
+      iles: ^0.4.2
       typescript: ~4.3.5
       vite: ^2.6.10
       vue-tsc: ^0.3.0
     devDependencies:
-      iles: 0.3.1
+      iles: 0.4.2
       typescript: 4.3.5
       vite: 2.6.10
       vue-tsc: 0.3.0_typescript@4.3.5
@@ -37,7 +37,7 @@ importers:
   playground/preact:
     specifiers:
       '@preact/preset-vite': ^2.1.5
-      iles: ^0.3.1
+      iles: ^0.4.2
       preact: ^10.5.15
       preact-render-to-string: ^5.1.19
       typescript: ~4.3.5
@@ -47,7 +47,7 @@ importers:
       preact: 10.5.15
     devDependencies:
       '@preact/preset-vite': 2.1.5_preact@10.5.15+vite@2.6.10
-      iles: 0.3.1
+      iles: 0.4.2
       preact-render-to-string: 5.1.19_preact@10.5.15
       typescript: 4.3.5
       vite: 2.6.10
@@ -55,7 +55,7 @@ importers:
 
   playground/solid:
     specifiers:
-      iles: ^0.3.1
+      iles: ^0.4.2
       solid-js: ^1.1.6
       typescript: ~4.3.5
       vite: ^2.6.10
@@ -64,7 +64,7 @@ importers:
     dependencies:
       solid-js: 1.1.6
     devDependencies:
-      iles: 0.3.1
+      iles: 0.4.2
       typescript: 4.3.5
       vite: 2.6.10
       vite-plugin-solid: 2.1.1
@@ -73,7 +73,7 @@ importers:
   playground/svelte:
     specifiers:
       '@sveltejs/vite-plugin-svelte': ^1.0.0-next.30
-      iles: ^0.3.1
+      iles: ^0.4.2
       svelte: ^3.44
       typescript: ~4.3.5
       vite: ^2.6.10
@@ -82,7 +82,7 @@ importers:
       svelte: 3.44.0
     devDependencies:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.30_svelte@3.44.0+vite@2.6.10
-      iles: 0.3.1
+      iles: 0.4.2
       typescript: 4.3.5
       vite: 2.6.10
       vue-tsc: 0.3.0_typescript@4.3.5
@@ -459,22 +459,19 @@ packages:
       - vue
     dev: true
 
-  /@mussi/vite-plugin-pages/0.18.3-beta.1_db95163608a1914986a6b89b9234c90a:
-    resolution: {integrity: sha512-WDoktfUyymLn6v7n1DuiJHDoyVTQPyMVcDdsPgY6mikNDrHGkBqJVxD8CWpgysWwPR57TMF+B+SN47k1tDktjQ==}
+  /@mussi/vite-plugin-pages/0.18.3-beta.2_vite@2.6.10+vue@3.2.20:
+    resolution: {integrity: sha512-apcorjSF9YMcidejFSqzAw4Rejy98BjztIj0+k0tq/Wri2ulbCvuAIX56YKVn0ZlMetDo3CAo7xg74EYqtzolg==}
     peerDependencies:
-      '@vue/compiler-sfc': '>=3'
       vite: '>=2'
-    peerDependenciesMeta:
-      '@vue/compiler-sfc':
-        optional: true
+      vue: '>= 3'
     dependencies:
-      '@vue/compiler-sfc': 3.2.20
       debug: 4.3.2
       deep-equal: 2.0.5
       fast-glob: 3.2.7
       gray-matter: 4.0.3
       json5: 2.2.0
       vite: 2.6.10
+      vue: 3.2.20
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1789,8 +1786,8 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
-  /iles/0.3.1:
-    resolution: {integrity: sha512-7xoWmDm13BH4JqTFxi/QnexbdooFpJaK+Krf7rQZTjg2QKPVfCqivTBARFR4Qk6lChIHcmsncUN06LSZKHAf1A==}
+  /iles/0.4.2:
+    resolution: {integrity: sha512-AsqP5KjALKNo83gO4LzDQgLnNZVuDGV4KaK4aPPHlWmM5EYwX/8XAfog2IQAPFUaIPr9L4RWlqcKmgx7/N1nPA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -1813,6 +1810,7 @@ packages:
       fs-extra: 10.0.0
       globby: 11.0.4
       gray-matter: 4.0.3
+      local-pkg: 0.4.0
       lru-cache: 6.0.0
       mdast-util-mdx-jsx: 1.1.1
       mdast-util-mdxjs-esm: 1.1.1
@@ -1822,9 +1820,9 @@ packages:
       pathe: 0.2.0
       remark-frontmatter: 4.0.0
       unist-util-visit: 2.0.3
-      unplugin-vue-components: 0.15.6_vite@2.6.10+vue@3.2.20
+      unplugin-vue-components: 0.16.0_vite@2.6.10+vue@3.2.20
       vite: 2.6.10
-      vite-plugin-pages: /@mussi/vite-plugin-pages/0.18.3-beta.1_db95163608a1914986a6b89b9234c90a
+      vite-plugin-pages: /@mussi/vite-plugin-pages/0.18.3-beta.2_vite@2.6.10+vue@3.2.20
       vite-plugin-xdm: 0.2.0_vite@2.6.10
       vue: 3.2.20
       vue-router: 4.0.11_vue@3.2.20
@@ -2229,6 +2227,13 @@ packages:
 
   /local-pkg/0.1.0:
     resolution: {integrity: sha512-WsR2tHvRGIxcC2clC30ECb5fjywzsjQagaHIy1+ykZaHz0ByoB0OL2riHqIYA5YYnensRXLszwbzHkhKzehZDg==}
+    dependencies:
+      mlly: 0.2.5
+    dev: true
+
+  /local-pkg/0.4.0:
+    resolution: {integrity: sha512-2XBWjO/v63JeR1HPzLJxdTVRQDB84Av2p2KtBA5ahvpyLUPubcAU6iXlAJrONcY7aSqgJhXxElAnKtnYsRolPQ==}
+    engines: {node: '>=14'}
     dependencies:
       mlly: 0.2.5
     dev: true
@@ -3428,8 +3433,8 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /unplugin-vue-components/0.15.6_vite@2.6.10+vue@3.2.20:
-    resolution: {integrity: sha512-Prl+qtWtDwnxSYJckGn+WvrXElhEnjN9bJyi9D7d0mJcsspuFBlxRQEzAUnDvlr0CvuIkBZBVdXLu1oDTESjhg==}
+  /unplugin-vue-components/0.16.0_vite@2.6.10+vue@3.2.20:
+    resolution: {integrity: sha512-BM/5p6/btLgDjUxf290cKbzbaGow95NFibhp+TSQhL0wyb1Q6sP0nmlqOvGnpLANFq0+urXxXDloMLlTJH6Fww==}
     engines: {node: '>=14'}
     peerDependencies:
       vue: 2 || 3

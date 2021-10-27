@@ -8,7 +8,7 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
-    "iles": "^0.3.1",
+    "iles": "^0.4.2",
     "typescript": "~4.3.5",
     "vite": "^2.6.10",
     "vite-plugin-solid": "^2.1.1",
