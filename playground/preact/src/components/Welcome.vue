@@ -38,7 +38,7 @@ import SupportIcon from './icons/IconSupport.vue'
     <template #heading>Community</template>
 
     Got stuck? Ask your question on the
-    <a target="_blank" href="https://discord.gg/PkbxgzPhJv">#ssr channel</a> of the Vite.js Discord
+    <a target="_blank" href="https://discord.gg/xhheEDwUMX">#iles channel</a> of the Vite.js Discord
     server. Follow the
     <a target="_blank" href="https://twitter.com/ilesjs">@ilesjs</a>
     twitter account for latest news.
