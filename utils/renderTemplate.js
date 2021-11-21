@@ -27,7 +27,7 @@ function renderTemplate(src, dest) {
 
   const filename = path.basename(src)
 
-  if (filename === 'package.json' && fs.existsSync(dest)) {
+  if (filename.endsWith('.json') && fs.existsSync(dest)) {
     // merge instead of overwriting
     const existing = JSON.parse(fs.readFileSync(dest))
     const newPackage = JSON.parse(fs.readFileSync(src))

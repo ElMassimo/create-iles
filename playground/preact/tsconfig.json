@@ -7,7 +7,7 @@
     "moduleResolution": "node",
     "isolatedModules": true,
     "strict": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
@@ -16,6 +16,7 @@
       "~/*": ["src/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "jsxImportSource": "preact"
   }
 }

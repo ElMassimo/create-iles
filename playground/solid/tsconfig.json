@@ -16,6 +16,7 @@
       "~/*": ["src/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "jsxImportSource": "solid-js"
   }
 }
