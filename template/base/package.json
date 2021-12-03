@@ -2,13 +2,12 @@
   "scripts": {
     "dev": "iles dev --open",
     "build": "iles build",
-    "preview": "vite preview --open --port 5050"
+    "preview": "iles preview --open --port 5050"
   },
   "engines": {
     "node": "^14.0.0 || >= 16.0.0"
   },
   "devDependencies": {
-    "iles": "^0.6.0",
-    "vite": "^2.6.13"
+    "iles": "^0.6.10"
   }
 }
