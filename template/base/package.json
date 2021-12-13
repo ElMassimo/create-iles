@@ -5,9 +5,9 @@
     "preview": "iles preview --open --port 5050"
   },
   "engines": {
-    "node": "^14.0.0 || >= 16.0.0"
+    "node": "^14.18 || >= 16.0.0"
   },
   "devDependencies": {
-    "iles": "^0.6.10"
+    "iles": "^0.7.5"
   }
 }

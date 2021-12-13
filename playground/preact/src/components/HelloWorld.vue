@@ -10,7 +10,7 @@ defineProps<{
     <h3>
       You’ve successfully created a project with
       <a target="_blank" href="https://iles-docs.netlify.app/">îles</a> +
-      <a target="_blank" href="https://vitejs.dev/">Vite</a> + <FrameworkLink client:none />. What's
+      <a target="_blank" href="https://vitejs.dev/">Vite</a> + <FrameworkLink client:idle />. What's
       next?
     </h3>
   </div>
