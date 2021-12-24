@@ -57,7 +57,7 @@ function fullCombination(arr) {
 }
 
 const flagCombinations = fullCombination(featureFlags)
-flagCombinations.push(['default'], ['svelte'], ['preact'], ['solid'])
+flagCombinations.push(['default'], ['default', 'vitest'], ['svelte'], ['preact'], ['solid'])
 
 for (const flags of flagCombinations) {
   createProjectWithFeatureFlags(flags)

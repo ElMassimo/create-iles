@@ -46,11 +46,11 @@ async function init() {
   // --jsx
   // --router / --vue-router
   // --vuex
-  // --with-tests / --tests / --cypress
+  // --with-tests / --tests / --vitest
   // --force (for force overwriting)
   const argv = minimist(process.argv.slice(2), {
     alias: {
-      'with-tests': ['tests', 'cypress']
+      'with-tests': ['tests', 'vitest']
     },
     // all arguments are treated as booleans
     boolean: true
@@ -130,15 +130,15 @@ async function init() {
             { title: 'Solid', value: 'solid' }
           ],
           initial: 0
+        },
+        {
+          name: 'needsTests',
+          type: () => (isFeatureFlagsUsed ? null : 'toggle'),
+          message: 'Add Vitest for testing?',
+          initial: false,
+          active: 'Yes',
+          inactive: 'No'
         }
-        // {
-        //   name: 'needsTests',
-        //   type: () => (isFeatureFlagsUsed ? null : 'toggle'),
-        //   message: 'Add Cypress for testing?',
-        //   initial: false,
-        //   active: 'Yes',
-        //   inactive: 'No'
-        // }
       ],
       {
         onCancel: () => {
@@ -186,33 +186,12 @@ async function init() {
   render('base')
 
   // Add configs.
-  // if (needsTests) {
-  //   render('config/cypress')
-  // }
+  if (needsTests) render('config/vitest')
   render('config/typescript')
 
   // Render code template.
   render('code/default')
   render(`code/${framework || 'vue'}`)
-
-  // Cleanup.
-  if (!needsTests) {
-    // All templates assumes the need of tests.
-    // If the user doesn't need it:
-    // rm -rf cypress **/__tests__/
-    preOrderDirectoryTraverse(
-      root,
-      (dirpath) => {
-        const dirname = path.basename(dirpath)
-
-        if (dirname === 'cypress' || dirname === '__tests__') {
-          emptyDir(dirpath)
-          fs.rmdirSync(dirpath)
-        }
-      },
-      () => {}
-    )
-  }
 
   // Instructions:
   // Supported package managers: pnpm > yarn > npm

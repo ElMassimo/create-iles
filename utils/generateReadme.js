@@ -6,14 +6,14 @@ const sfcTypeSupportDoc =
   '\n' +
   '## Type Support for `.vue` Imports in TS\n' +
   '\n' +
-  "Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates.\n" +
+  "Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic `PageComponent` type by default. In most cases this is fine if you don't really care about component prop types outside of templates.\n" +
   '\n' +
   'However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can run `Volar: Switch TS Plugin on/off` from VSCode command palette.\n'
 
 export default function generateReadme({
   projectName,
   packageManager,
-  needsTypeScript,
+  needsTypeScript = true,
   needsTests
 }) {
   let readme = `# ${projectName}
