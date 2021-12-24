@@ -1,22 +1,20 @@
 {
-  "name": "svelte",
+  "name": "default-vitest",
   "version": "0.0.0",
   "scripts": {
     "dev": "iles dev --open",
     "build": "iles build",
     "preview": "iles preview --open --port 5050",
+    "test": "iles test",
     "typecheck": "vue-tsc --noEmit"
   },
   "engines": {
     "node": "^14.18 || >= 16.0.0"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
     "iles": "^0.7.19",
     "typescript": "^4.5",
+    "vitest": "*",
     "vue-tsc": "^0.29"
-  },
-  "dependencies": {
-    "svelte": "^3.44"
   }
 }

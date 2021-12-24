@@ -56,16 +56,15 @@ async function init() {
     boolean: true
   })
 
-  // if any of the feature flags is set, we would skip the feature prompts
-  // use `??` instead of `||` once we drop Node.js 12 support
-  const isFeatureFlagsUsed = typeof (argv.default || argv.tests) === 'boolean'
-
   const hasFramework =
     argv.framework ||
     (argv.preact && 'preact') ||
     (argv.solid && 'solid') ||
     (argv.svelte && 'svelte') ||
     (argv.default && 'vue')
+
+  // if any of the feature flags is set, we would skip the feature prompts
+  const isFeatureFlagsUsed = typeof hasFramework === 'string' || typeof argv.tests === 'boolean'
 
   let targetDir = argv._[0]
   const defaultProjectName = !targetDir ? 'iles-app' : targetDir
@@ -147,7 +146,7 @@ async function init() {
       }
     )
   } catch (cancelled) {
-    console.log(cancelled.message)
+    console.error('Failed to generate site, ', cancelled.message)
     process.exit(1)
   }
 

@@ -1,4 +1,4 @@
-# svelte
+# default-vitest
 
 [îles]: https://github.com/ElMassimo/iles
 [configuration reference]: https://iles-docs.netlify.app/config
@@ -35,4 +35,16 @@ pnpm dev
 
 ```sh
 pnpm build
+```
+
+### Run Unit Tests with [Cypress Component Testing](https://docs.cypress.io/guides/component-testing/introduction)
+
+```sh
+pnpm test:unit # or `pnpm test:unit:ci` for headless testing
+```
+
+### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+
+```sh
+pnpm test:e2e # or `pnpm test:e2e:ci` for headless testing
 ```
