@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "preact": "^10.5.15"
+    "preact": "^10.7.0"
   },
   "devDependencies": {
-    "@preact/preset-vite": "^2.1.5",
-    "preact-render-to-string": "^5.1.19"
+    "@preact/preset-vite": "^2.2.0",
+    "preact-render-to-string": "^5.1.20"
   }
 }
