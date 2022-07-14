@@ -12,9 +12,9 @@
     "node": "^14.18 || >= 16.0.0"
   },
   "devDependencies": {
-    "iles": "^0.7.19",
+    "iles": "^0.8.0",
     "typescript": "^4.5",
     "vitest": "*",
-    "vue-tsc": "^0.29"
+    "vue-tsc": "^0.38"
   }
 }

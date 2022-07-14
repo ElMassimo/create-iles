@@ -11,10 +11,10 @@
     "node": "^14.18 || >= 16.0.0"
   },
   "devDependencies": {
-    "iles": "^0.7.19",
+    "iles": "^0.8.0",
     "typescript": "^4.5",
     "vite-plugin-solid": "^2.2.5",
-    "vue-tsc": "^0.29"
+    "vue-tsc": "^0.38"
   },
   "dependencies": {
     "solid-js": "^1.3.8"
