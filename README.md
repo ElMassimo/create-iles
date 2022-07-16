@@ -2,8 +2,6 @@
 
 # create-iles
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/ElMassimo/create-iles)
-
 An easy way to start an [îles] project
 
 ## Usage
