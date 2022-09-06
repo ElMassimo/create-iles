@@ -21,7 +21,7 @@
     "pretest": "run-s build snapshot",
     "test": "node test.js",
     "prepublishOnly": "run-s build snapshot",
-    "release": "npx bumpp --commit --tag --push && pnpm publish --tag next --tag latest"
+    "release": "npx bumpp --commit --tag --push && pnpm publish --tag next && pnpm dist-tag add latest"
   },
   "repository": {
     "type": "git",
