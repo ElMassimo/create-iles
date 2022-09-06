@@ -12,8 +12,9 @@
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.40",
-    "iles": "^0.8.0",
+    "iles": "^0.8.4",
     "typescript": "^4.5",
+    "vite": "^3.0.9",
     "vue-tsc": "^0.38"
   },
   "dependencies": {
