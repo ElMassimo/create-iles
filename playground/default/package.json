@@ -11,9 +11,8 @@
     "node": "^14.18 || >= 16.0.0"
   },
   "devDependencies": {
-    "iles": "^0.8.4",
+    "iles": "^0.8.6",
     "typescript": "^4.5",
-    "vite": "3.0.9",
     "vue-tsc": "^0.38"
   }
 }

@@ -11,13 +11,12 @@
     "node": "^14.18 || >= 16.0.0"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.40",
-    "iles": "^0.8.4",
-    "typescript": "^4.5",
-    "vite": "3.0.9",
-    "vue-tsc": "^0.38"
+    "@sveltejs/vite-plugin-svelte": "^1.0.9",
+    "iles": "^0.8.6",
+    "typescript": "^4.8.4",
+    "vue-tsc": "^0.38.9"
   },
   "dependencies": {
-    "svelte": "^3.46.5"
+    "svelte": "^3.52.0"
   }
 }

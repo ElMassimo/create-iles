@@ -12,7 +12,7 @@ declare module '@vue/runtime-core' {
     EcosystemIcon: typeof import('./src/components/icons/EcosystemIcon.vue')['default']
     FrameworkLink: typeof import('./src/components/FrameworkLink.svelte')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
-    Island: typeof import('./../../node_modules/.pnpm/iles@0.8.0/node_modules/iles/dist/client/app/components/Island.vue')['default']
+    Island: typeof import('./../../node_modules/.pnpm/iles@0.8.6/node_modules/iles/dist/client/app/components/Island.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SupportIcon: typeof import('./src/components/icons/SupportIcon.vue')['default']
