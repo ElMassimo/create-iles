@@ -3,6 +3,6 @@
     "test": "iles test"
   },
   "devDependencies": {
-    "vitest": "*"
+    "vitest": "^0.30"
   }
 }
