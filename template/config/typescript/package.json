@@ -3,7 +3,7 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
-    "typescript": "^5.0",
-    "vue-tsc": "^1.2"
+    "typescript": "^5.6",
+    "vue-tsc": "^2.1"
   }
 }

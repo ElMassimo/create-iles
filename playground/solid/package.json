@@ -9,15 +9,15 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "engines": {
-    "node": "^14.18 || >= 16.0.0"
+    "node": ">= 20.0.0"
   },
   "devDependencies": {
-    "iles": "^0.9.5",
-    "typescript": "^5.0",
-    "vite-plugin-solid": "^2.7.0",
-    "vue-tsc": "^1.2"
+    "iles": "^0.10.0-beta.1",
+    "typescript": "^5.6",
+    "vite-plugin-solid": "^2.10.2",
+    "vue-tsc": "^2.1"
   },
   "dependencies": {
-    "solid-js": "^1.7.3"
+    "solid-js": "^1.9.3"
   }
 }

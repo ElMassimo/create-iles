@@ -9,16 +9,16 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "engines": {
-    "node": "^14.18 || >= 16.0.0"
+    "node": ">= 20.0.0"
   },
   "devDependencies": {
-    "@preact/preset-vite": "^2.5.0",
-    "iles": "^0.9.5",
-    "preact-render-to-string": "^6.0.2",
-    "typescript": "^5.0",
-    "vue-tsc": "^1.2"
+    "@preact/preset-vite": "^2.9.1",
+    "iles": "^0.10.0-beta.1",
+    "preact-render-to-string": "^6.5.11",
+    "typescript": "^5.6",
+    "vue-tsc": "^2.1"
   },
   "dependencies": {
-    "preact": "^10.13.2"
+    "preact": "^10.24.3"
   }
 }

@@ -6,9 +6,9 @@
     "now": "npm run build && npm run preview"
   },
   "engines": {
-    "node": "^14.18 || >= 16.0.0"
+    "node": ">= 20.0.0"
   },
   "devDependencies": {
-    "iles": "^0.9.5"
+    "iles": "^0.10.0-beta.1"
   }
 }
