@@ -1,6 +1,6 @@
 {
   "name": "create-iles",
-  "version": "0.9.5",
+  "version": "0.10.0-beta.1",
   "description": "An easy way to start an îles project",
   "type": "module",
   "bin": {
@@ -11,7 +11,7 @@
     "template"
   ],
   "engines": {
-    "node": "^14.18 || >= 16.0.0"
+    "node": ">= 20.0.0"
   },
   "scripts": {
     "prepare": "husky install",
